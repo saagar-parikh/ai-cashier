@@ -1,0 +1,10 @@
+Flask
+SpeechRecognition
+PyPDF2
+Pillow  # for handling images
+Pandas
+Deepgram-SDK
+whisper
+Flask-SocketIO  # for real-time dashboard updates
+gtts
+playsound==1.2.2
