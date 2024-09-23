@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 import time
 import re
 
+os.makedirs('uploads', exist_ok=True)
+
 app = Flask(__name__)
 app.config['DEBUG'] = False
 
