@@ -9,6 +9,7 @@ import time
 import re
 
 app = Flask(__name__)
+app.config['DEBUG'] = False
 
 # Initialize dialogue model
 load_dotenv()
@@ -94,4 +95,4 @@ def order_summary():
         return jsonify([])  # Return an empty list if no orders found
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
