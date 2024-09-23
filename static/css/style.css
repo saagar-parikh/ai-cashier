@@ -45,6 +45,14 @@ tr:hover {
     cursor: pointer;
 }
 
+#reset-order-btn {
+    background-color: #00e1ff;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
 #complete-order-btn {
     background-color: #00e1ff;
     color: black;
