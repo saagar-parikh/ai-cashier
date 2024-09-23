@@ -2,6 +2,8 @@
 
 AI Cashier is a Flask application that uses OpenAI's GPT-3 model to process voice orders from customers. It also provides a real-time order summary dashboard.
 
+App deployed __[HERE](https://ai-cashier-sdp-8348acf0354e.herokuapp.com/)__
+
 ## Setup
 
 1. Install the required Python packages:
