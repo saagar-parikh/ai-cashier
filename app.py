@@ -88,7 +88,8 @@ def place_order():
 @app.route('/order-summary', methods=['GET'])
 def order_summary():
     try:
-        orders_df = pd.read_csv('uploads/orders.csv')
+        global orders_df
+        # orders_df = pd.read_csv('uploads/orders.csv')
         return orders_df.to_dict(orient='records')
     except FileNotFoundError:
         print("No orders found")
