@@ -7,9 +7,47 @@ h1, h2 {
     color: #333;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+
 #voice-btn {
     background-color: #4CAF50;
     color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#stop-voice-btn {
+    background-color: #af4c54;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#complete-order-btn {
+    background-color: #00e1ff;
+    color: black;
     padding: 10px;
     border: none;
     cursor: pointer;

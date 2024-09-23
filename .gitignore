@@ -1,2 +1,10 @@
 __pycache__/
 uploads/
+.env
+*.txt
+*.pdf
+*.csv
+*.jpg
+*.jpeg
+*.jpg
+*.png

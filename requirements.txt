@@ -8,3 +8,5 @@ whisper
 Flask-SocketIO  # for real-time dashboard updates
 gtts
 playsound==1.2.2
+python-dotenv
+openai

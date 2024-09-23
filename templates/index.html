@@ -5,28 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Cashier</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Styles for the canvas visualization */
+        /* Canvas left-aligned */
+        canvas {
+            display: block;
+            margin: 20px 0;
+            background-color: #222;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            height: 150px;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to the AI Café Cashier</h1>
     
     <section>
         <h2>Upload Menu</h2>
-        <form id="menu-form" method="post" enctype="multipart/form-data" action="/upload-menu">
+        <form id="menu-form" method="post" enctype="multipart/form-data">
             <input type="file" name="menu" required>
             <button type="submit">Upload</button>
         </form>
-    </section>
+        <p id="voice-output"></p>
+    </section>    
 
     <section>
         <h2>Order via Voice</h2>
         <button id="voice-btn">Start Speaking</button>
+        <button id="stop-voice-btn">Stop Speaking</button>
+        <button id="complete-order-btn">Complete Order</button>
         <p id="voice-output"></p>
         <audio id="voice-audio" style="display:none;"></audio>
+        <canvas id="audio-visualizer"></canvas>
     </section>
 
     <section>
         <h2>Order Summary</h2>
-        <div id="order-summary"></div>
+        <table id="order-summary-table">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Items</th>
+                    <th>Customizations</th>
+                    <th>Price Per Item</th>
+                    <th>Order Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </section>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
