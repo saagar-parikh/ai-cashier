@@ -94,6 +94,12 @@ def order_summary():
     except FileNotFoundError:
         print("No orders found")
         return jsonify([])  # Return an empty list if no orders found
+    
+@app.route('/reset-order-summary', methods=['POST'])
+def reset_order_summary():
+    global orders_df
+    orders_df = pd.DataFrame(columns=["customer_name", "items", "customizations", "price_per_item", "order_total"])
+    return jsonify({"message": "Order summary has been reset."}), 200
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))

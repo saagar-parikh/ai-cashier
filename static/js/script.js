@@ -103,6 +103,29 @@ completeOrderBtn.addEventListener('click', () => {
     .catch(err => console.error(err));
 });
 
+// Reset order summary
+document.getElementById('reset-order-btn').addEventListener('click', () => {
+    fetch('/reset-order-summary', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        const tbody = document.querySelector('#order-summary-table tbody');
+        tbody.innerHTML = ''; // Clear all rows
+        lastOrderData = []; // Reset lastOrderData to prevent unnecessary updates
+        voiceOutput.textContent = data.message; // Feedback message from the server
+    })
+    .catch(err => console.error('Error resetting order summary:', err));
+});
+
+
+
 // Function to update the order summary table
 function updateOrderSummary() {
     fetch('/order-summary', { method: 'GET' })
