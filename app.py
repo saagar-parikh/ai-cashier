@@ -38,8 +38,6 @@ def upload_menu():
 
     # Pass the extracted menu text to the dialogue model
     dialogue_model.set_menu_text(menu_text)
-    with open("uploads/menu_text.txt", "w") as f:
-        f.write(menu_text)
     
     return jsonify({"message": "Menu uploaded successfully!"})
 
