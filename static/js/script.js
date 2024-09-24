@@ -14,7 +14,8 @@ let lastOrderData = []; // Store last order data for comparison
 menuForm.addEventListener('submit', (event) => {
     event.preventDefault();  // Prevent the default form submission
     // Show loading message
-    
+    voiceOutput.textContent = "Processing menu...";
+
     const formData = new FormData(menuForm);
     fetch('/upload-menu', {
         method: 'POST',
@@ -32,7 +33,7 @@ menuForm.addEventListener('submit', (event) => {
     })
     .catch(err => {
         console.error(err);
-        voiceOutput.textContent = "Error uploading menu."; // Show error message on the page
+        voiceOutput.textContent = "Error uploading or processing menu. Please try again."; // Show error message on the page
     });
 });
 
