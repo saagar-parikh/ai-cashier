@@ -17,7 +17,7 @@ def process_image(file):
     return text
 
 def process_text(file):
-    """Extract text from a .txt menu file."""
-    with open(file, 'r', encoding='utf-8') as f:
-        text = f.read()
-    return text
+    """Extract text from a .txt menu."""
+    # Read the file directly without saving it
+    file_content = file.read().decode('utf-8')
+    return file_content
