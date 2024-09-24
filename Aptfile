@@ -2,13 +2,8 @@ tesseract-ocr
 libtesseract-dev
 libarchive13
 libarchive-dev
-libpng16-16
 libpng-dev
-libjpeg62
 libjpeg-dev
-libwebp6
 libwebp-dev
-libgif7
 libgif-dev
-libtiff5
 libtiff-dev
