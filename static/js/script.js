@@ -232,4 +232,4 @@ function drawVisualizer() {
 }
 
 // Periodically check for updates every 5 seconds
-setInterval(updateOrderSummary, 5000);
+// setInterval(updateOrderSummary, 5000);
